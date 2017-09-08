@@ -26,7 +26,7 @@ im_height, im_width = images_list[0].shape
 # Преобразование массива в массив numpy
 labels_list = np.array(labels_list)
 # Создание модели распознователя лиц
-model = cv2.face.createFisherFaceRecognizer()
+model = cv2.face.FisherFaceRecognizer_create()
 # Обучение модели
 model.train(images_list, labels_list)
 

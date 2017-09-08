@@ -40,7 +40,7 @@ int main() {
     read_csv(CSV_PATH, images, labels);
     int imWidth = images[0].cols;
     int imHeight = images[0].rows;
-    Ptr<FaceRecognizer> model = createFisherFaceRecognizer();
+    Ptr<FaceRecognizer> model = FisherFaceRecognizer::create();
     model->train(images, labels);
     CascadeClassifier haar_cascade;
     haar_cascade.load(FACE_CASCADE_PATH);
